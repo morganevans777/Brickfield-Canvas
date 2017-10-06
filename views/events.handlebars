@@ -1,0 +1,36 @@
+  <style>
+      .login {
+        display: hidden;
+      }
+  </style>
+  
+  <div class="container">
+      <h2 class='header center blue-text text-lighten-10'>Events Information</h2>
+
+      <div class='center'>
+        <p>Here is a list of our events</p>
+      </div>
+
+  </div>
+
+  
+    
+    
+    <a style='color: black'>
+      {{#each events}}
+          <div class='row'>
+
+            <div class='col s12'>
+              {{title}}
+            </div>
+
+            <div class='col s12'>
+              {{description}}
+            </div>
+
+          </div>
+      {{/each}}
+    </a>
+   
+
+   

@@ -1,0 +1,47 @@
+<div class="container">
+
+      <h2 class='header center blue-text text-lighten-10'>Brokers Information</h2>
+      
+      <div class='center'>
+        <p>Please feel free to browse the buildings floorplans below.</p>
+      </div>
+      
+      <div class='container center'>
+          <img class='responsive-img' src='images/floorplan.jpg' width='600px'>
+          <img class='responsive-img' src='images/specs.png' width='740px'>
+          
+      </div>  
+      
+      <div class='labels center blue-text' class='row center'>
+          <h2>Ground Storey</h2>
+          <img class='responsive-img' src='images/floorplan1.png'>
+          <h2>First Storey</h2>
+          <img class='responsive-img' src='images/floorplan2.png'>
+          <h2>Second Storey</h2>
+          <img class='responsive-img' src='images/floorplan3.png'>
+          <h2>Parking Layout</h2>
+          <img class='responsive-img' src='images/floorplan4.png'>
+      </div>  
+  </div>
+
+<p>If you would like to get more information, or wish to organise a meeting with us or if you have any inquiries regarding mandates for engaging and represting us, please click the button below...</p>
+
+  <a class='waves-effect waves-light btn blue z-depth-5' href="mailto:trevor@sprinthive.com?subject=Brickfield%20Canvas"><i class='material-icons left'>email</i>Contact us</a>
+
+<br></br>
+
+<a style='color: black'>
+      {{#each brokers}}
+          <div class='row'>
+
+            <div class='col s12'>
+              {{title}}
+            </div>
+
+            <div class='col s12'>
+              {{description}}
+            </div>
+
+          </div>
+      {{/each}}
+</a>

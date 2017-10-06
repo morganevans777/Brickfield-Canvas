@@ -1,0 +1,17 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Morgan Evans",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express-session": "^1.15.6",
+    "express3-handlebars": "^0.5.2",
+    "firebase": "^4.4.0"
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE>
+
+<html>
+
+<head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+ <link rel='stylesheet' type='text/css' href='/css/style.css'>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Prosto+One" rel="stylesheet">
+</head>
+
+    <style>
+
+        body {
+            font-family: 'Prosto One', cursive;
+            text-shadow: 0 1px 1px black;
+        }
+
+        .disclaimer {
+            font-size: 10px;
+            line-height: 10%;
+            text-align: left;
+            margin: 0px 50px 0px 50px 
+        }
+
+    </style>
+
+<body class='center'>
+
+  <nav class="blue" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo center">Brickfield</a>
+
+
+    {{#if user}}
+       <ul class='login'>
+        <li><a href='/logout'>Logout</a></li>
+      </ul>
+
+       <ul class="right hide-on-med-and-down">
+          <li><a href="/settings">Settings</a></li>
+      </ul>
+    {{/if}}
+
+      <ul class="right hide-on-med-and-down">
+          <li><a href="/brokers">Brokers</a></li>
+      </ul>
+
+      <ul class="right hide-on-med-and-down">
+          <li><a href="/tenants">Tenants</a></li>
+      </ul>
+
+      <ul class="right hide-on-med-and-down">
+          <li><a href="/events">Events</a></li>
+      </ul>
+
+    <!-- Login button -->
+
+
+    {{#unless user}}
+      <ul class='login'>
+        <li><a href='/login'>Login</a></li>
+      </ul>
+    {{/unless}}
+    
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <div id='header'>
+        <h1 class="header center white-text text-lighten-10">Brickfield Canvas</h1>
+        </div>
+        <br><br>
+      </div>
+    </div>
+    <div class="parallax"><img class='responsive-img' src="/images/entrance.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+    {{{body}}}
+
+    
+
+  <footer class="page-footer blue">
+    
+    <div class='disclaimer'>
+      <p>Disclaimer - The images on display in this website are for display purposes only, and do not convey actual representations of the Brickfield Canvas project, the intention of this website is to illustrate the building based on existing concept designs, as well as including the idea's of the design team</p>
+    </div>
+
+    <div class='foot' class="footer-copyright">
+        © 2017 by Brickfield Group
+    </div>
+
+  </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>$('.carousel.carousel-slider').carousel({fullWidth: true});</script>
+    
+</body>
+</html>

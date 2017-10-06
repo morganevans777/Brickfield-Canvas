@@ -1,0 +1,70 @@
+    
+  <p>Click on the item you wish to edit and you'll be taken to that items edit page.</p>
+  
+  <h1 class='blue-text darken-2'>Events</h1>
+
+    <a class='btn blue darken-3 z-depth-5' href='/add/events'>Add Event</a>
+
+   {{#each events}}
+    
+    <a style='color: black' href='/edit/events/{{id}}' >
+        <div class='row'>
+
+            <div class='col s12'>    
+                {{title}}
+            </div>
+
+            <div class='col s12'>
+                {{description}}
+            </div>
+
+        </div>
+   </a>
+
+   {{/each}}
+
+    <h1 class='blue-text darken-2'>Tenants</h1>
+
+    <a class='btn blue darken-3 z-depth-5' href='/add/tenants'>Add Blog</a>
+
+   {{#each tenants}}
+
+   <a style='color: black' href='/edit/tenants/{{id}}' >
+    <div class='row'>
+        
+        <div class='col s12'>
+            {{title}}
+        </div>
+        
+        <div class='col s12'>
+            {{description}}
+        </div>
+    </div>
+   </a>
+
+   {{/each}}
+
+
+    <h1 class='blue-text darken-2'>Brokers</h1>
+
+    <a class='btn blue darken-3 z-depth-5' href='/add/brokers'>Add Topic</a>
+
+   {{#each brokers}}
+
+   <a style='color: black' href='/edit/brokers/{{id}}' >
+    <div class='row'>
+        
+        <div class='col s12'>  
+            {{title}}
+        </div>
+
+        <div class='col s12'>
+            {{description}}
+        </div>
+
+    </div>
+   </a>
+   
+   {{/each}}
+
+<br></br>
