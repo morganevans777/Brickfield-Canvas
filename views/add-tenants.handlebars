@@ -1,6 +1,20 @@
+<style>
 
-<form    method='POST' action='/add/{{category}}'>
+    .add-box {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 
+    input {
+        line-height: normal;
+        border-color: lightblue !important;
+    }
+
+</style>
+
+<form method='POST' action='/add/{{category}}'>
+
+<div class='add-box'>
     <h5 class='blue-text'>Please fill in the details of your blog post below...</h5>
 
     <h5 class='blue-text left-align'>blog post name</h5>
@@ -8,6 +22,8 @@
     <h5 class='blue-text left-align'>blog post</h5>    
         <input placeholder='blog post' type='text' name='description'/>
     <input value='add blog post' type='submit' class='btn blue darken-3 z-depth-5'>
+</div>
+
 </form>
 
 

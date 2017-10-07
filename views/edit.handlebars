@@ -1,10 +1,39 @@
+<style>
+
+    .add-box {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .buttons {
+        display: inline-block;
+    }
+
+    input {
+        line-height: normal;
+        border-color: lightblue !important;
+    }
+
+</style>
+
 <br></br>
-<button><a href='/remove/{{category}}/{{id}}'>Remove</a></button>
+
+<h5 class='blue-text darken-3'>Welcome to the edit page...</h5>
 
 <form method='POST' action='/edit/{{category}}/{{id}}'>
+    
+  <div class='add-box'>
+
     <input placeholder='title' type='text' name='title' value="{{title}}"/>
     <input placeholder='description' type='text' name='description' value="{{description}}"/>
-    <input value='Update Item' type='submit' class='btn'>
+
+  </div>
+
+   <div class='buttons center'>
+    <input value='Update Item' type='submit' class='btn blue darken-3 z-depth-5'>
+    <button class='btn red darken-3 z-depth-5'><a href='/remove/{{category}}/{{id}}'></a>Remove</button>
+   </div>
+
 </form>
 
         
