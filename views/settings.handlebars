@@ -3,8 +3,6 @@
   
   <h1 class='blue-text darken-2'>Events</h1>
 
-    <a class='btn blue darken-3 z-depth-5' href='/add/events'>Add Event</a>
-
    {{#each events}}
     
     <a style='color: black' href='/edit/events/{{id}}' >
@@ -23,9 +21,9 @@
 
    {{/each}}
 
-    <h1 class='blue-text darken-2'>Tenants</h1>
+   <a class='btn blue darken-3 z-depth-5' href='/add/events'>Add Event</a>
 
-    <a class='btn blue darken-3 z-depth-5' href='/add/tenants'>Add Blog</a>
+    <h1 class='blue-text darken-2'>Tenants</h1>
 
    {{#each tenants}}
 
@@ -44,10 +42,9 @@
 
    {{/each}}
 
+<a class='btn blue darken-3 z-depth-5' href='/add/tenants'>Add Blog</a>
 
-    <h1 class='blue-text darken-2'>Brokers</h1>
-
-    <a class='btn blue darken-3 z-depth-5' href='/add/brokers'>Add Topic</a>
+    <h1 class='blue-text darken-2'>Brokers</h1> 
 
    {{#each brokers}}
 
@@ -66,5 +63,7 @@
    </a>
    
    {{/each}}
+
+<a class='btn blue darken-3 z-depth-5' href='/add/brokers'>Add Topic</a>
 
 <br></br>
