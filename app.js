@@ -50,8 +50,6 @@ app.get('/login', function(req, res) {
         
 })
 
-//Morgans code
-
 app.get('/logOut', function(req, res) {
     database.logOut(function(response, error){
         if(error === undefined){
@@ -62,8 +60,6 @@ app.get('/logOut', function(req, res) {
         }
     })  
 })
-
-//Morgans code 
 
 app.post('/login', function(req, res) {
     database.login(req.body.email, req.body.password, function(response, error){
