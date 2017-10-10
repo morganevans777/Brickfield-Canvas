@@ -5,7 +5,7 @@
         padding-right: 40px;
     }
 
-    input {
+    .input1 {
         line-height: normal;
         border-color: lightblue !important;
     }
@@ -65,26 +65,25 @@
     <h5 class='blue-text'>Please fill in the details of your event below...</h5>
 
     <h5 class='blue-text left-align'>Event name</h5>
-        <input placeholder='event name' type='text' name='title'/>
+        <input class='input1' placeholder='event name' type='text' name='title'/>
     <h5 class='blue-text left-align'>Description of event</h5>
-        <input placeholder='description' type='text' name='description'/>
-   
-    <h5 class='blue-text left-align'>Event Location</h5>
-   
-    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-    <div id="map"></div>
-    <div id="infowindow-content">
-      <span id="place-name"  class="title"></span><br>
-        Place ID <span id="place-id"></span><br>
-      <span id="place-address"></span>
-    </div>
+        <input class='input1' placeholder='description' type='text' name='description'/>
     
     <br></br>
-
     <input value='add event' type='submit' class='btn blue darken-3 z-depth-5'>
-
 </div>
 </form>
+
+<h5 class='blue-text left-align'>Event Location</h5>
+   
+        <input onchange='initMap()' id="pac-input" class="controls" type="text" placeholder="Enter a location" name='location'>
+            <div id="map"></div>
+        
+        <div id="infowindow-content">
+            <span id="place-name"  class="title"></span><br>
+                Place ID <span id="place-id"></span><br>
+            <span id="place-address"></span>
+        </div>
 
 <script>
       // This sample uses the Place Autocomplete widget requesting only a place

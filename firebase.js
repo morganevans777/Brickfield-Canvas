@@ -100,7 +100,11 @@ exports.fetchDataById = function(category, id, callback) {
 
 }
 
-exports.remove = function(category, id) {
-    return firebase.database().ref('/' + category + '/' + id).remove()
-    console.log(category, id)
+exports.remove = function(category, id, callback) {
+    return firebase.database().ref('/' + category + '/' + id).remove().then(function(error){
+    callback(error, undefined);
+    }).catch(function(error){
+        callback(undefined, error)
+        console.log(error)
+    })
 }

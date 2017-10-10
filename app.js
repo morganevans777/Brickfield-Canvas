@@ -128,12 +128,18 @@ app.post('/add/:category', function(req, res){
 })
 
 app.get('/remove/:category/:id', function(req, res) {
-    database.remove(req.params.category, req.params.id)
+    database.remove(req.params.category, req.params.id, function(error) {
+        if (error = undefined) {
+            res.redirect('/settings')
+        } else {
+            console.log(error)
+        }
+    })
+
     res.redirect('/settings')
 })
 
 app.get('/events', function(req, res) {
-    var data = {title: req.body.title, description: req.body.description}
     database.fetchData('events',function(data) {
         res.render('events', {events: data, user: req.session.user});
     });
