@@ -11,13 +11,12 @@ var config = {
 
     exports.fetchData = function(category, callback) {
         var allData = [];
-        
         if(category === 'all'){
             return firebase.database().ref('/').once('value').then(function(snapshot) {
             if(snapshot) {
                 for(var category in snapshot.val()){
                     for(var id in snapshot.val()[category]){
-                        allData.push({id: id,category: category ,title: snapshot.val()[category][id].title, description: snapshot.val()[category][id].description})
+                        allData.push({id: id,category: category ,title: snapshot.val()[category][id].title, description: snapshot.val()[category][id].description, location: snapshot.val()[category][id].location})
                     }
                 }
                 callback(allData)
@@ -30,7 +29,7 @@ var config = {
              
             if(snapshot) {
                 for(var id in snapshot.val()){
-                    allData.push({id: id, title: snapshot.val()[id].title, description: snapshot.val()[id].description });
+                    allData.push({id: id, title: snapshot.val()[id].title, description: snapshot.val()[id].description, location: snapshot.val()[id].location});
                 }
                 callback(allData)
             } else {

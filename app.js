@@ -90,14 +90,18 @@ app.get('/settings', function(req, res) {
     });
 })
 
+//added code for location category here
+
 app.get('/edit/:category/:id', function(req, res) {
     database.fetchDataById(req.params.category, req.params.id, function(data){
-        res.render('edit', {description: data.description, title: data.title , category: req.params.category, id: req.params.id, user: req.session.user})
+        res.render('edit', {description: data.description, location: data.location, title: data.title , category: req.params.category, id: req.params.id, user: req.session.user})
     })
 })
 
+//added code for location category here
+
 app.post('/edit/:category/:id', function(req, res){
-    var data = {title: req.body.title, description: req.body.description};
+    var data = {title: req.body.title, description: req.body.description, location: req.body.location};
     database.update(req.params.category, req.params.id,data );
     res.redirect('/settings')
 })
