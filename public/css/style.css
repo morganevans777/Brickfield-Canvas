@@ -84,6 +84,7 @@
  #blog {
    color: blue;
    width: 100%;
+   display: inline-block;
  }
  
  .post {
