@@ -33,29 +33,29 @@
 
   <nav class="blue" role="navigation">
     <div class="nav-wrapper">
-      <a id="logo-container" href="/" class="brand-logo center">Brickfield</a>
+      <a id="logo-container" href="/" class="brand-logo center orange-text">Brickfield</a>
 
 
     {{#if user}}
        <ul class='login'>
-        <li><a href='/logout'>Logout</a></li>
+        <li><a href='/logout' class='orange-text'>Logout</a></li>
       </ul>
 
        <ul class="right hide-on-med-and-down">
-          <li><a href="/settings">Settings</a></li>
+          <li><a href="/settings" class='orange-text'>Settings</a></li>
       </ul>
     {{/if}}
 
       <ul class="right hide-on-med-and-down">
-          <li><a href="/brokers">Brokers</a></li>
+          <li><a href="/brokers" class='orange-text'>Brokers</a></li>
       </ul>
 
       <ul class="right hide-on-med-and-down">
-          <li><a href="/tenants">Tenants</a></li>
+          <li><a href="/tenants" class='orange-text'>Tenants</a></li>
       </ul>
 
       <ul class="right hide-on-med-and-down">
-          <li><a href="/events">Events</a></li>
+          <li><a href="/events" class='orange-text'>Events</a></li>
       </ul>
 
     <!-- Login button -->
@@ -63,7 +63,7 @@
 
     {{#unless user}}
       <ul class='login'>
-        <li><a href='/login'>Login</a></li>
+        <li><a href='/login' class='orange-text'>Login</a></li>
       </ul>
     {{/unless}}
     

@@ -26,6 +26,11 @@
     padding-right: 45px;
   }
 
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+
 </style>
 
 <div class='container greeting'>
@@ -140,7 +145,17 @@
  </div>
 
  <br></br>
- 
+
+  <div class='container'>
+  <div class='center'>
+    <p class='orange-text'>Download our information and sign-up forms below...</p>
+  </div>
+</div>
+
+  <a href='forms/Brickfield Tenants Information.pdf'><button class='btn blue z-depth-5'>Sign up forms</button></a>
+
+  <a href='forms/Brickfield Group indicative rentals 21 Sep 2017.odt'><button class='btn blue z-depth-5'>Pricing forms</button></a>
+
   <div class="container">
       <h2 class='header center blue-text text-lighten-10'>Building Information</h2>
   </div>
@@ -155,7 +170,7 @@
        </div>
        <div class='card-content'>
          <p class='head'>Events Info.</p>
-         <p>Find out what events are being held here</p>   
+         <p class='orange-text'>Find out what events are being held here</p>   
        </div>
      </div>  
      
@@ -169,7 +184,7 @@
       </div>
       <div class='card-content'>
         <p class='head'>Tenants Info.</p>
-        <p>Looking to rent?</p>   
+        <p class='orange-text'>Looking to rent?</p>   
       </div>
     </div>  
     
@@ -183,7 +198,7 @@
      </div>
      <div class='card-content'>
        <p class='head'>Brokers Info.</p>
-       <p>Looking to Invest?</p>   
+       <p class='orange-text'>Looking to represent this Project?</p>   
      </div>
    </div> 
     
@@ -212,6 +227,25 @@
            Brickfield Group has aquired 3 properties (in Cape Town and Johannesburg) and has gross letable area of over 14,000 square meters. 
           </p>  
 
+          <h3 class='orange-text'>Where we are located</h3>
+          <div id="map"></div>
+
+          <script>
+
+              function initMap() {
+                var uluru = {lat: -33.9353159, lng: 18.454861};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 12,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
+
+          </script>
+
         </div>
       </div>
   </div>
@@ -227,3 +261,7 @@
     </div>
     <div class="parallax"><img src="images/courtyard.jpg" width='120px' alt="Unsplashed background img 3"></div>
   </div>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMyM-4Pe80L_lgrL2Dq1TOIua6Vilthog&callback=initMap">
+  </script>
