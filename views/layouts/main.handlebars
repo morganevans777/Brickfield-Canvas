@@ -29,7 +29,7 @@
         }
         
         .template-img {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/brickfieldView.png');
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/new/foyer.png');
             -webkit-background-size: cover;
             -moz-background-size:  cover;
             -o-background-size: cover;
@@ -40,31 +40,31 @@
 
 <body class='center'>
 
-  <nav class="blue" role="navigation">
+  <nav class="grey" role="navigation">
     <div class="nav-wrapper">
-      <a id="logo-container" href="/" class="brand-logo center orange-text">Brickfield Canvas</a>
+      <a id="logo-container" href="/" class="brand-logo center black-text">Brickfield Canvas</a>
 
 
     {{#if user}}
        <ul class='login'>
-        <li><a href='/logout' class='orange-text'>Logout</a></li>
+        <li><a href='/logout' class='black-text'>Logout</a></li>
       </ul>
 
        <ul class="right hide-on-med-and-down">
-          <li><a href="/settings" class='orange-text'>Settings</a></li>
+          <li><a href="/settings" class='black-text'>Settings</a></li>
       </ul>
     {{/if}}
 
       <ul class="right hide-on-med-and-down">
-          <li><a href="/brokers" class='orange-text'>Floorplans</a></li>
+          <li><a href="/brokers" class='black-text'>Floorplans</a></li>
       </ul>
 
       <ul class="right hide-on-med-and-down">
-          <li><a href="/tenants" class='orange-text'>Designs</a></li>
+          <li><a href="/tenants" class='black-text'>Designs</a></li>
       </ul>
 
       <ul class="right hide-on-med-and-down">
-          <li><a href="/events" class='orange-text'>Events</a></li>
+          <li><a href="/events" class='black-text'>Events</a></li>
       </ul>
 
     <!-- Login button -->
@@ -72,7 +72,7 @@
 
     {{#unless user}}
       <ul class='login'>
-        <li><a href='/login' class='orange-text'>Login</a></li>
+        <li><a href='/login' class='black-text'>Login</a></li>
       </ul>
     {{/unless}}
     
@@ -84,7 +84,7 @@
       <div class="container">
         <br><br>
         <div id='header'>
-          <h1 class="header center orange-text text-lighten-10">Putting the fun into work</h1>
+          <h1 class="header center white-text text-lighten-10">Putting the fun into work</h1>
         </div>
         <br><br>
       </div>
@@ -94,13 +94,13 @@
 
     {{{body}}}
 
-  <footer class="page-footer blue">
+  <footer class="page-footer grey">
     
     <div class='disclaimer'>
-      <p>Disclaimer - The images on display in this website are for display purposes only, and do not convey actual representations of the Brickfield Canvas project, the intention of this website is to illustrate the building based on existing concept designs, as well as including the idea's of the design team behind this project.</p>
+      <p class='black-text'>Disclaimer - The images on display in this website are for display purposes only, and do not convey actual representations of the Brickfield Canvas project, the intention of this website is to illustrate the building based on existing concept designs, as well as including the idea's of the design team behind this project.</p>
     </div>
 
-    <div class='foot orange-text' class="footer-copyright">
+    <div class='foot black-text' class="footer-copyright">
         © 2017 by Brickfield Group
     </div>
 
