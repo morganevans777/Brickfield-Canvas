@@ -8,6 +8,7 @@
  <link rel='stylesheet' type='text/css' href='/css/style.css'>
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Prosto+One" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
 </head>
 
     <style>
@@ -36,17 +37,28 @@
             background-size: cover;
         }
 
+        .logo {
+            font-family: 'Modak', cursive;
+            font-size: 35px;
+            text-shadow: 0 0 0; !important
+        }
+
     </style>
 
 <body class='center'>
 
   <nav class="orange" role="navigation">
     <div class="nav-wrapper">
-      <a id="logo-container" href="/" class="brand-logo center black-text">Brickfield Canvas</a>
-
+      <ul>
+        <li>
+         <a href="/" class="black-text logo">Brickfield Canvas</a>
+        </li>
+      </ul>
 
     {{#if user}}
-       <ul class='login'>
+
+
+       <ul class='right login'>
         <li><a href='/logout' class='black-text'>Logout</a></li>
       </ul>
 
@@ -55,15 +67,15 @@
       </ul>
     {{/if}}
 
-      <ul class="right hide-on-med-and-down">
+      <ul class="hide-on-med-and-down">
           <li><a href="/brokers" class='black-text'>Floorplans</a></li>
       </ul>
 
-      <ul class="right hide-on-med-and-down">
+      <ul class="hide-on-med-and-down">
           <li><a href="/tenants" class='black-text'>Designs</a></li>
       </ul>
 
-      <ul class="right hide-on-med-and-down">
+      <ul class="hide-on-med-and-down">
           <li><a href="/events" class='black-text'>Events</a></li>
       </ul>
 
@@ -71,7 +83,7 @@
 
 
     {{#unless user}}
-      <ul class='login'>
+      <ul class='right login'>
         <li><a href='/login' class='black-text'>Login</a></li>
       </ul>
     {{/unless}}
