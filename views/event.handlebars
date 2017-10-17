@@ -1,0 +1,65 @@
+  <style>
+        #map {
+    height: 400px;
+    width: 100%;
+  }
+  </style>
+  
+  <div class="container">
+      <h2 class='header center blue-text text-lighten-10'>Events Information</h2>
+
+  </div>
+    <a style='color: black' >
+          <div class='container'>
+            <div class='col s12 m4'>
+                <div class='card blue darken-2'>
+                    <div class='card-content'>    
+                        <span class='card-title'>{{title}}</span>
+                        {{!-- <p>{{description}}</p> --}}
+                        {{!-- <p>{{location}}</p> --}}
+                        <div id="map"></div>
+                        <input value='{{location}}' style='display: none' id='location'/>
+                      
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    
+<script>
+
+    //google map function
+  var locationStr = String(document.getElementById('location').value); 
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -33.8688, lng: 151.2195},
+          zoom: 13
+        });
+
+       
+
+  
+
+      
+    var address = locationStr;
+    var geocoder= new google.maps.Geocoder();
+   geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == 'OK') {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+
+      }
+
+      
+
+</script>

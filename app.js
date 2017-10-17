@@ -149,6 +149,16 @@ app.get('/events', function(req, res) {
     });
 })
 
+app.get('/view/:category/:id', function(req, res){
+
+    var category = req.params.category;
+    category = category.substring(0, category.length - 1);
+    var template = category;
+    database.fetchDataById(req.params.category, req.params.id, function(data){
+        res.render(template, {description: data.description, location: data.location, title: data.title , category: req.params.category, id: req.params.id, user: req.session.user})
+    })
+})
+
 app.get('/tenants', function(req, res) {
     database.fetchData('tenants',function(data) {
         res.render('tenants', {tenants: data, user: req.session.user});

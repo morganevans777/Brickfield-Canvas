@@ -4,36 +4,13 @@
       border-radius: 50%;
       width: 430px;
       height: 400px;
-      float: left;
   }
 
-  .float-left {
-    float: left;
-    margin: 25 0 25 25;
-  }
-
-  .carousel {
-    width: 699px;
-    height: 150px;
-  }
-
-  .image {
-    margin: 0 25 0 25;
-  }
-
-  .text {
-    margin: 0 40 0 40;
+  .textR {
     text-align: right;
   }
 
-  .text2 {
-    margin: 0 40 0 0;
-    text-align: right;  
-  }
-
-
-  .text3 {
-    margin: 0 0 0 40;
+  .textL {
     text-align: left;
   }
 
@@ -42,74 +19,154 @@
     width: 100%;
   }
 
-  .slides {
-    padding-left: 325px;
-  }
-
   .mission {
     font-size: 15px;
     border: 4px solid orange;
   }
 
+  .width {
+    width: 100%;
+  }
+
 </style>
 
+<br></br>
+
 <div class='container'>
-  <div>
+<div class='row'>
+
+  <div class='col s6'>
     <img class='img-circle' src='images/workspace4.jpg'> 
   </div>
 
-  <div class='text'>
-    <h1 class='blue-text'>Hello and Welcome!</h1>
+  <div class='col s6 textL'>
+    <h2 class='blue-text'>Hello and Welcome!</h2>
     <h5 class='orange-text'>Tired of work leaving you feeling like no more than just another brick in the wall?</h5>
     <p>Experience an entirely new workplace, Brickfield Canvas is dedicated to delivering the highest quality workspace experience for you and your team, entirely free from stress, anxiety, and worries</p>
   </div>
+
+</div>  
 </div>
 
-  <div class='container float-left'>
+<!-- First div -->
+ 
+  <div class='row'>
+
+    <div class='col s6 textR'>
+        <h2 class='blue-text'>Bring home to work</h2>
+        <h5 class='orange-text'>Feel like just staying at home today? At Brickfield Canvas... You can!</h5>
+        <p>In brickfield offices you'll always experience all the comforts of home, at work!... from coffee, to couches, to yoga... everything you need to increase your productivity</p>
+    </div>
+
+    <div class='col s6'>
+        <img class='responsive-img' src='images/workspace3.jpg' width='600px'>
+    </div>
+
+  </div>
+
+<!-- Second div -->
+
+  <div class='row'>
+
+    <div class='col s6'>
+        <img class='responsive-img' src='images/meeting4.jpg' width='660px'>
+    </div>
+
+    <div class='col s6 textL'>
+        <h2 class='blue-text'>Stunning conference rooms</h2>
+        <h5 class='orange-text'>Need some space for a group meeting?</h5>
+        <p>Brickfield Canvas has a host of the best conference rooms to offer, fully outfitted with everything needed to support a meeting, from A/V gear to wall-mounted tv's for presentations, Brickfield Canvas has what you're looking for</p>
+    </div>
+
+  </div>
+
+<!-- Third div -->
+
+  <div class='row'>
+
+    <div class='col s6 textR'>
+        <h2 class='blue-text'>Top quality amenities</h2>
+        <h5 class='orange-text'>We've got your back!</h5>
+        <p>Brickfield Canvas offers you the highest quality services, as well as doing so in the "greenest" way possible... from wifi, to fibre, to solar panelling, We've got absolutely everything you need and more</p>
+    </div>
+
+    <div class='col s6 '>
+        <img class='responsive-img' src='images/solar.jpg'>
+    </div>
+
+  </div>
+
+<!-- Fourth div -->
+
+  <div class='row'>
+
+    <div class='col s6'>
+        <img class='responsive-img' src='images/workspace1.jpg' width='700px'>
+    </div>
+
+    <div class='col s6 textL'>
+        <h2 class='blue-text'>A truly unique work experience</h2>
+        <h5 class='orange-text'>Find the fun in work!</h5>
+        <p>We've done all the work so you don't need to... Simply bring yourself and your laptop, sit down wherever you'd like and begin your day! We've designed Brickfield Canvas to relieve the usual stress's and strains that usually accompany an office job</p>
+    </div>
+
+  </div>
+
+<!-- End of divs -->
+
+<!-- Carousel -->
+
+  <div class='container'>
     <div class='carousel carousel-slider center' data-indicators='true'>
 
-      <div class='carousel-item blue white-text'>
-        <h2>Bright colors and vibrant design</h2>
-        <img class='responsive-img' src='images/workspace3.jpg'>
-      </div>
-      
-      <div class='carousel-item orange white-text' href='#one!'>
-        <h2>Cozy and fun office spaces</h2>
-        <img class='responsive-img' src='images/workspace2.jpg' height='515px'>
+      <div class='carousel-item blue white-text' href='#one!'>
+        <h2>Enticing no?</h2>
+        <img src='images/workspace8.jpg' height='515px'>
       </div>
 
       <div class='carousel-item blue white-text'>
-        <h2>Fully functional Coffee bars</h2>
-        <img class='responsive-img' src='images/coffeeShop2.jpg'>
+        <img src='images/coffeeShop3.jpg'>
       </div>
 
-      <div class='carousel-item orange white-text'>
-        <h2>Ultra modern styling  </h2>
-        <img class='responsive-img' src='images/meeting2.jpg'>
+      <div class='carousel-item blue white-text'>
+        <img src='images/workspace6.jpg'>
+      </div>
+
+      <div class='carousel-item blue white-text'>
+        <img src='images/workspace7.jpg'>
+      </div>
+
+      <div class='carousel-item blue white-text'>
+        <img src='images/meeting6.jpg'>
       </div>
 
     </div>
   </div>
 
-<div class='text2'>
-    <h1 class='blue-text'>Bring home to work</h1>
-    <h5 class='orange-text'>Feel like just staying at home today? At Brickfield Canvas... You can!</h5>
-    <p>In brickfield offices you'll always experience all the comforts of home, at work!... from coffee, to couches, to yoga... everything you need to increase your productivity</p>
-</div>
+  <div class='container'>
+    <div class='center'>
+      <p class='orange-text'>Download our information and sign-up forms below...</p>
+    </div>
+  </div>
 
-<div class='right image'>
-  <img class='responsive-img' src='images/meeting4.jpg' width='598px' height='400px'>
-</div>
+  <div>
+    <a href='forms/Brickfield Tenants Information.pdf'><button class='btn blue z-depth-5 white-text'>Sign up forms</button></a>
+    <a href='forms/Brickfield Group indicative rentals 21 Sep 2017.docx'><button class='btn orange z-depth-5 white-text'>Pricing forms</button></a>
+  </div>
 
-<div class='text3'>
-    <h1 class='blue-text'>Stunning conference rooms</h1>
-    <h5 class='orange-text'>Need some space for a group meeting?</h5>
-    <p>Brickfield Canvas has a host of the best conference rooms to offer, fully outfitted with everything needed to support a meeting, from A/V gear to wall-mounted tv's for presentations, Brickfield Canvas has what you're looking for</p>
- </div>
-
-<br></br>
-
-<div class='container float-left'>
+ <!--  example!!!
+ 
+  <div class='container center'>
+    <div class='row'>
+      <div class='col s6'>
+        <div>
+          <h1 class='blue-text'>A truly unique work experience</h1>
+          <h5 class='orange-text'>Find the fun in work!</h5>
+          <p>We've done all the work so you don't need to... Simply bring yourself and your laptop, sit down wherever you'd like and begin your day! We've designed Brickfield Canvas to relieve the usual stress's and strains that usually accompany an office job</p>
+        </div>
+      </div>
+      <div class='col s6'>
+        <div class='container'>
     <div class='carousel carousel-slider center' data-indicators='true'>
 
       <div class='carousel-item orange white-text' href='#one!'>
@@ -134,67 +191,10 @@
 
     </div>
 </div>
-
-<br></br>
-
- <div class='text2'>
-    <h1 class='blue-text'>Top quality amenities</h1>
-    <h5 class='orange-text'>We've got your back!</h5>
-    <p>Brickfield Canvas offers you the highest quality services, as well as doing so in the "greenest" way possible... from wifi, to fibre, to solar panelling, We've got absolutely everything you need and more</p>
- </div>
-
- <br></br>
-
-<div class='right image'>
-  <img class='responsive-img' src='images/workspace1.jpg' width='598px' height='400px'>
-</div>
-
-<div class='text3'>
-    <h1 class='blue-text'>A truly unique work experience</h1>
-    <h5 class='orange-text'>Find the fun in work!</h5>
-    <p>We've done all the work so you don't need to... Simply bring yourself and your laptop, sit down wherever you'd like and begin your day! We've designed Brickfield Canvas to relieve the usual stress's and strains that usually accompany an office job</p>
- </div>
-
-<br></br>
-
-  <div class='slides center'>
-    <div class='carousel carousel-slider center' data-indicators='true'>
-
-      <div class='carousel-item blue white-text' href='#one!'>
-        <h2>Enticing no?</h2>
-        <img src='images/workspace8.jpg' height='515px'>
       </div>
-
-      <div class='carousel-item orange white-text'>
-        <img src='images/coffeeShop3.jpg'>
-      </div>
-
-      <div class='carousel-item blue white-text'>
-        <img src='images/workspace6.jpg'>
-      </div>
-
-      <div class='carousel-item orange white-text'>
-        <img src='images/workspace7.jpg'>
-      </div>
-
-      <div class='carousel-item blue white-text'>
-        <img src='images/meeting6.jpg'>
-      </div>
-
     </div>
   </div>
-
-  <div class='container'>
-    <div class='center'>
-      <p class='orange-text'>Download our information and sign-up forms below...</p>
-    </div>
-  </div>
-
-  <div>
-    <a href='forms/Brickfield Tenants Information.pdf'><button class='btn blue z-depth-5 white-text'>Sign up forms</button></a>
-    <a href='forms/Brickfield Group indicative rentals 21 Sep 2017.docx'><button class='btn orange z-depth-5 white-text'>Pricing forms</button></a>
-  </div>
-
+-->
   <div class="container">
       <h2 class='header center blue-text text-lighten-10'>Building Information</h2>
   </div>
@@ -222,7 +222,7 @@
           <img class='boxes' src='images/parking.jpg' class='image'>
       </div>
       <div class='card-content'>
-        <p class='head'>Building concept designs</p>
+        <p class='head'>Building Concept</p>
         <p class='orange-text'>Looking for a space to work in?</p>   
       </div>
     </div>  
