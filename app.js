@@ -4,6 +4,7 @@ var database = require('./firebase.js')
 var bodyParser = require('body-parser')
 var session = require('express-session')
 var multer = require('multer')
+var fs = require('file-system');
 
 var handlebars = require('express3-handlebars')
 .create({defaultLayout: 'main'});
@@ -17,7 +18,6 @@ app.use(session({
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static("public"));
-
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -47,9 +47,7 @@ app.get('/', function(req, res) {
 }); 
 
 app.get('/login', function(req, res) {
-        res.render('login');
-
-        
+        res.render('login');       
 })
 
 app.get('/logOut', function(req, res) {
@@ -88,7 +86,6 @@ app.get('/settings', function(req, res) {
                 values.brokers.push(item);
             }
         })
-
         res.render('settings', values);
     });
 })
@@ -149,9 +146,18 @@ app.get('/remove/:category/:id', function(req, res) {
             console.log(error)
         }
     })
-
     res.redirect('/settings')
 })
+
+//Node.js .unlink function
+
+// fs.unlink("./public/images/uploads/"+req.file.filename, (err) => {
+//     if (err) {
+//         console.log("failed to delete local image:"+err);
+//     } else {
+//         console.log('successfully deleted local image');                                
+//     }
+// });
 
 app.get('/events', function(req, res) {
     database.fetchData('events',function(data) {
