@@ -12,7 +12,7 @@
 
 </style>
 
-<form method='POST' action='/add/{{category}}'>
+<form method='POST' action='/add/{{category}}' enctype="multipart/form-data">
 
 <div class='add-box'>
     <h5 class='orange-text'>Please fill in the details of your blog post below...</h5>
@@ -22,6 +22,8 @@
     <h5 class='orange-text left-align'>blog post</h5>    
         <input placeholder='blog post' type='text' name='description'/>
     <input value='add blog post' type='submit' class='btn orange darken-3 z-depth-5'>
+    <input type='file' name='img' />
+
 </div>
 
 </form>

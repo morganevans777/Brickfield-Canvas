@@ -16,7 +16,7 @@ var config = {
             if(snapshot) {
                 for(var category in snapshot.val()){
                     for(var id in snapshot.val()[category]){
-                        allData.push({id: id,category: category ,title: snapshot.val()[category][id].title, description: snapshot.val()[category][id].description, location: snapshot.val()[category][id].location})
+                        allData.push({id: id,category: category ,title: snapshot.val()[category][id].title, description: snapshot.val()[category][id].description, location: snapshot.val()[category][id].location, img: snapshot.val()[category][id].img})
                     }
                 }
                 callback(allData)

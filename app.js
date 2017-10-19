@@ -3,6 +3,7 @@ var app = express();
 var database = require('./firebase.js')
 var bodyParser = require('body-parser')
 var session = require('express-session')
+var multer = require('multer')
 
 var handlebars = require('express3-handlebars')
 .create({defaultLayout: 'main'});
@@ -16,6 +17,7 @@ app.use(session({
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static("public"));
+
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -86,6 +88,7 @@ app.get('/settings', function(req, res) {
                 values.brokers.push(item);
             }
         })
+
         res.render('settings', values);
     });
 })
@@ -118,12 +121,19 @@ app.get('/add/:category', function(req, res){
          res.render('add-tenants',{category: req.params.category, user: req.session.user});
         break;
     }
-})
+}) 
 
-app.post('/add/:category', function(req, res){
+app.post('/add/:category',multer({ dest: './public/uploads/'}).single('img'), function(req, res){
     var data = req.body;
+  
+    if (req.file) {
+        var path = (req.file.path).replace("public/", '');
+        data.img = path;
+    } 
+
     database.writeData(req.params.category, data, function(response, error){
         if(error === undefined){
+            console.log(data.img, 'image')
             res.redirect('/settings');
         } else {
             console.log(error)
