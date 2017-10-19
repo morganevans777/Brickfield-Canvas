@@ -59,7 +59,7 @@ exports.login = function(email, password, callback) {
     })
 }
 
-//Morgans code//
+//Logout function//
 
 exports.logOut = function( callback) {
     return firebase.auth().signOut().then(function(res) {
@@ -69,8 +69,6 @@ exports.logOut = function( callback) {
         callback(undefined, error)
     })
 }
-
-//Morgans code
 
 exports.update = function(category, id, data) {
     console.log(id, category, data)
