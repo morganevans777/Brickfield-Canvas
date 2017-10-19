@@ -1,3 +1,5 @@
+//App requirments
+
 var express = require('express');
 var app = express();
 var database = require('./firebase.js')
@@ -28,7 +30,6 @@ app.use(bodyParser.json())
 app.use(function(req, res, next){
     var path = req.path.split('/')[1];
     if(!req.session.user){
-    
         if(path == 'settings'){
             res.redirect('/login');
         } else if(path == 'add'){
@@ -71,7 +72,6 @@ app.post('/login', function(req, res) {
             res.redirect('/login')
         }
     })
- 
 })
 
 app.get('/settings', function(req, res) {
@@ -97,8 +97,6 @@ app.get('/edit/:category/:id', function(req, res) {
         res.render('edit', {description: data.description, location: data.location, title: data.title , category: req.params.category, id: req.params.id, user: req.session.user})
     })
 })
-
-//added code for location category here
 
 app.post('/edit/:category/:id', function(req, res){
     var data = {title: req.body.title, description: req.body.description, location: req.body.location};
@@ -151,7 +149,7 @@ app.get('/remove/:category/:id', function(req, res) {
 
 //Node.js .unlink function
 
-// fs.unlink("./public/images/uploads/"+req.file.filename, (err) => {
+// fs.unlink("./uploads/"+req.file.id, (err) => {
 //     if (err) {
 //         console.log("failed to delete local image:"+err);
 //     } else {

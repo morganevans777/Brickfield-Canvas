@@ -1,5 +1,7 @@
 var firebase = require("firebase");
 
+//Configuration for firebase.js
+
 var config = {
     apiKey: "AIzaSyCMyM-4Pe80L_lgrL2Dq1TOIua6Vilthog",
     authDomain: "practice-5ca25.firebaseapp.com",
@@ -8,6 +10,8 @@ var config = {
   };
   firebase.initializeApp(config);
   console.log('firebase initialized')
+
+//This fetched data from firebase
 
     exports.fetchData = function(category, callback) {
         var allData = [];
@@ -40,6 +44,8 @@ var config = {
     
 }
 
+//Login function
+
 exports.login = function(email, password, callback) {
     
     return firebase.auth().signInWithEmailAndPassword(email, password).then(function(user){
@@ -70,20 +76,25 @@ exports.logOut = function( callback) {
     })
 }
 
+//Update function
+
 exports.update = function(category, id, data) {
     console.log(id, category, data)
     return firebase.database().ref('/' + category + '/' + id).set(data);
 }
 
+//This function writes data to firebase
+
 exports.writeData = function(category, data, callback) {
    return firebase.database().ref('/' + category).push('/' + category + '/').set(data).then(function(res){
     callback(res, undefined);
     console.log(category, data, 'writeData')
-    
    }).catch(function(err){
        callback(undefined, err)
    });
 }
+
+//this function fetched data from firebase via its ID
 
 exports.fetchDataById = function(category, id, callback) {
         return firebase.database().ref('/' + category + '/' + id).once('value').then(function(snapshot) {
@@ -94,8 +105,9 @@ exports.fetchDataById = function(category, id, callback) {
             callback(allData)
         }
     });
-
 }
+
+//Remove function
 
 exports.remove = function(category, id, callback) {
     return firebase.database().ref('/' + category + '/' + id).remove().then(function(error){
