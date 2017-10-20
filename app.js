@@ -104,6 +104,8 @@ app.post('/edit/:category/:id', function(req, res){
     res.redirect('/settings')
 })
 
+//location code
+
 app.get('/add/:category', function(req, res){
     switch(req.params.category){
         case 'events':
@@ -136,6 +138,16 @@ app.post('/add/:category',multer({ dest: './public/uploads/'}).single('img'), fu
     });
 })
 
+//Node.js .unlink function
+
+// fs.unlink("./uploads/"+req.file.id, (err) => {
+//     if (err) {
+//         console.log("failed to delete local image:"+err);
+//     } else {
+//         console.log('successfully deleted local image');                                
+//     }
+// });
+
 app.get('/remove/:category/:id', function(req, res) {
     database.remove(req.params.category, req.params.id, function(error) {
         if (error = undefined) {
@@ -146,16 +158,6 @@ app.get('/remove/:category/:id', function(req, res) {
     })
     res.redirect('/settings')
 })
-
-//Node.js .unlink function
-
-// fs.unlink("./uploads/"+req.file.id, (err) => {
-//     if (err) {
-//         console.log("failed to delete local image:"+err);
-//     } else {
-//         console.log('successfully deleted local image');                                
-//     }
-// });
 
 app.get('/events', function(req, res) {
     database.fetchData('events',function(data) {

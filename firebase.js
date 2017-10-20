@@ -11,7 +11,7 @@ var config = {
   firebase.initializeApp(config);
   console.log('firebase initialized')
 
-//This fetched data from firebase
+//This fetch's data from firebase and displays it
 
     exports.fetchData = function(category, callback) {
         var allData = [];
@@ -41,7 +41,6 @@ var config = {
             }
         })
         }
-    
 }
 
 //Login function
