@@ -1,14 +1,9 @@
 
-<style>
-
-</style>
-
   <p>Click on the item you wish to edit and you'll be taken to that items edit page.</p>
   
   <h1 class='blue-text lighten-1'>Events</h1>
 
-   {{#each events}}
-    
+   {{#each events}}  
     <a style='color: black' href='/edit/events/{{id}}' >
         <div class='container'>
             <div class='col s12 m4'>
@@ -22,7 +17,6 @@
             </div>
         </div>
     </a>
-
    {{/each}}
 
    <a class='btn blue lighten z-depth-5' href='/add/events'>Add Event</a>
@@ -30,9 +24,8 @@
     <h1 class='blue-text lighten-1'>Blog Space</h1>
 
    {{#each tenants}}
-
    <a style='color: black' href='/edit/tenants/{{id}}' >
-    <div class='container'>
+        <div class='container'>
             <div class='col s12 m4'>
                 <div class='card blue darken-2'>
                     <div class='card-content'>    
@@ -44,7 +37,6 @@
             </div>
         </div>
    </a>
-
    {{/each}}
 
 <a class='btn blue lighten z-depth-5' href='/add/tenants'>Add Blog</a>
@@ -52,9 +44,8 @@
     <h1 class='blue-text lighten-1'>Brokers</h1> 
 
    {{#each brokers}}
-
    <a style='color: black' href='/edit/brokers/{{id}}' >
-    <div class='container'>
+        <div class='container'>
             <div class='col s12 m4'>
                 <div class='card blue darken-2'>
                     <div class='card-content'>    
@@ -65,7 +56,6 @@
             </div>
         </div>
    </a>
-   
    {{/each}}
 
 <a class='btn blue lighten z-depth-5' href='/add/brokers'>Add Topic</a>

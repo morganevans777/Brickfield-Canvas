@@ -20,8 +20,6 @@
         height: 300px;
         width: 700px;
     }
-
-      /* Optional: Makes the sample page fill the window. */
       
     html, body {
         height: 100%;
@@ -63,11 +61,13 @@
         display: inline;
     }
 
+    /* Google maps styling */
+
 </style>
 
 <br></br>
 
-<h5 class='blue-text darken-3'>Welcome to the edit page...</h5>
+  <h5 class='blue-text darken-3'>Welcome to the edit page...</h5>
 
 <form method='POST' action='/edit/{{category}}/{{id}}'>
     
@@ -91,6 +91,7 @@
    </div>
 
 </form>
+
     <div class='buttons center'>
         <a href='/remove/{{category}}/{{id}}'><button class='btn red darken-3 z-depth-5'>Remove</button></a>
     </div>
@@ -139,6 +140,7 @@
           }
 
           // Set the position of the marker using the place ID and location.
+          
           marker.setPlace({
             placeId: place.place_id,
             location: place.geometry.location
