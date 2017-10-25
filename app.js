@@ -47,6 +47,10 @@ app.get('/', function(req, res) {
     res.render('home', {user: req.session.user})
 }); 
 
+app.get('/about', function(req, res) {
+    res.render('about')
+});
+
 app.get('/login', function(req, res) {
         res.render('login');       
 })
@@ -182,9 +186,7 @@ app.get('/tenants', function(req, res) {
 })
 
 app.get('/brokers', function(req, res) {
-    database.fetchData('brokers',function(data) {
-        res.render('brokers', {brokers: data, user: req.session.user});
-    });
+    res.render('brokers', {user: req.session.user});
 })
 
 app.listen(3000);
