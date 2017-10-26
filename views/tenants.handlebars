@@ -4,11 +4,23 @@
         display: flex;
         justify-content: center;
         text-align: left;
-        border-radius: 39px;
     }
 
-    .img {
-        height: auto;
+    .container flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .boxes {
+        width: 280px;
+        height: 300px;
+    }
+
+    .flexy {
+        display: flex;
+        align-items: baseline;
+        flex-direction: row;
+        justify-content: space-between; 
     }
 
 </style>
@@ -17,13 +29,13 @@
 
 <!-- Navigation buttons -->
 
-  <div class='container flex'>
+  <div class='flex'>
       
-      <a href='/'><div class='btn black-text white curve'>Home</div></a>
-      <a href='/tenants'><div class='btn black-text grey curve'>Work Spaces</div></a>
-      <a href='/brokers'><div class='btn black-text white curve'>Amenities</div></a>
-      <a href='/events'><div class='btn black-text white curve'>Events</div></a>
-      <a href='/about'><div class='btn black-text white curve'>About Us</div></a>
+      <a href='/'><div class='btn black-text white curve'>Home<i class='material-icons left'>home</i></div></a>
+      <a href='/tenants'><div class='btn black-text grey curve'>Work Spaces<i class='material-icons left'>airline_seat_recline_normal</i></div></a>
+      <a href='/brokers'><div class='btn black-text white curve'>Amenities<i class='material-icons left'>local_cafe</i></div></a>
+      <a href='/events'><div class='btn black-text white curve'>Events<i class='material-icons left'>insert_invitation</i></div></a>
+      <a href='/about'><div class='btn black-text white curve'>About Us<i class='material-icons left'>group</i></div></a>
 
   </div>
 
@@ -39,7 +51,7 @@
   <div class='row'>
 
     <div class='col s6'> 
-        <img class='responsive-img box materialboxed img' src='images/meeting4.jpg' width='660px'>
+        <img class='responsive-img box materialboxed' src='images/meeting4.jpg' width='660px'>
     </div>
 
     <div class='col s6'>
@@ -50,14 +62,40 @@
   </div>
 </div>
 
+<br></br>
+
+<div class='container flexy'>
+    <div class='boxes'><img class='materialboxed responsive-img' src='images/meeting1.jpg' height='200px' width='300px'/></div>
+    <div class='boxes'><img class='materialboxed responsive-img' src='images/meeting2.jpg' height='200px' width='300px'/></div>
+    <div class='boxes'><img class='materialboxed responsive-img' src='images/meeting3.jpg' height='200px' width='300px'/></div>
+</div>
+
 <h2 class='center'>Work Desks</h2>
 
-    <div class='container box'>
-        <div>
-        <div class='img responsive-img'><img src='images/meeting1.jpg'/></div>
-        <div class='img responsive-img'><img src='images/meeting2.jpg'/></div>
-        </div>
+<!-- Second display-box -->
+
+<div class='container box grey lighten-1 z-depth-4'>
+  <div class='row'>
+
+    <div class='col s6'>
+        <h3 class='black-text'>A truly unique work experience</h3>
+        <p>We've done all the work so you don't need to... Simply bring yourself and your laptop, sit down wherever you'd like and begin your day! We've designed Brickfield Canvas to relieve the usual stress's and strains that usually accompany an office job</p>
     </div>
+
+    <div class='col s6'>
+        <img class='responsive-img image-corners materialboxed' src='images/workspace1.jpg' width='700px'>
+    </div>
+
+  </div>
+</div>
+
+<br></br>
+
+<div class='container flex'>
+    <div class='boxes'><img class='materialboxed responsive-img' src='images/workspace2.jpg' height='200px' width='300px'/></div>
+    <div class='boxes'><img class='materialboxed responsive-img' src='images/workspace3.jpg' height='200px' width='300px'/></div>
+    <div class='boxes'><img class='materialboxed responsive-img' src='images/workspace4.jpg' height='200px' width='300px'/></div>
+</div>
 
   <a style='color: black'>
       {{#each tenants}}
