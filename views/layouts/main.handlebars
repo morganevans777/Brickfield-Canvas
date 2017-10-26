@@ -55,21 +55,21 @@
 
 <!-- NavBar -->
 
-  <nav class="blue" role="navigation">
+  <nav class="white z-depth-5" role="navigation">
     <div class="nav-wrapper">
       <ul>
         <li>
-         <a href="/" class="white-text logo">Brickfield Canvas</a>
+         <a href="/" class="black-text logo">Brickfield Canvas</a>
         </li>
       </ul>
 
     {{#if user}}
        <ul class='right login'>
-        <li><a href='/logout' class='white-text'>Logout</a></li>
+        <li><a href='/logout' class='black-text'>Logout</a></li>
       </ul>
 
        <ul class="right hide-on-med-and-down">
-          <li><a href="/settings" class='white-text'>Settings</a></li>
+          <li><a href="/settings" class='black-text'>Settings</a></li>
       </ul>
     {{/if}}
 
@@ -79,7 +79,7 @@
 
     {{#unless user}}
       <ul class='right login'>
-        <li><a href='/login' class='white-text'>Login</a></li>
+        <li><a href='/login' class='black-text'>Login</a></li>
       </ul>
     {{/unless}}
 
@@ -103,7 +103,7 @@
 
     {{{body}}}
 
-  <footer class="page-footer blue">
+  <footer class="page-footer white darken">
     
     <div class='disclaimer'>
       <p class='black-text'>Disclaimer - The images on display in this website are for display purposes only, and do not convey actual representations of the Brickfield Canvas project, the intention of this website is to illustrate the building based on existing concept designs, as well as including the idea's of the design team behind this project.</p>

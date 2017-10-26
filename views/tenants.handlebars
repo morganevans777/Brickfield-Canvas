@@ -1,14 +1,29 @@
+<style>
+
+    .box {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        border-radius: 39px;
+    }
+
+    .img {
+        height: auto;
+    }
+
+</style>
+
 <br></br>
 
 <!-- Navigation buttons -->
 
   <div class='container flex'>
       
-      <a href='/'><div class='btn curve'>Home</div></a>
-      <a href='/tenants'><div class='btn grey curve'>Work Spaces</div></a>
-      <a href='/brokers'><div class='btn curve'>Amenities</div></a>
-      <a href='/events'><div class='btn curve'>Events</div></a>
-      <a href='/about'><div class='btn curve'>About Us</div></a>
+      <a href='/'><div class='btn black-text white curve'>Home</div></a>
+      <a href='/tenants'><div class='btn black-text grey curve'>Work Spaces</div></a>
+      <a href='/brokers'><div class='btn black-text white curve'>Amenities</div></a>
+      <a href='/events'><div class='btn black-text white curve'>Events</div></a>
+      <a href='/about'><div class='btn black-text white curve'>About Us</div></a>
 
   </div>
 
@@ -18,13 +33,37 @@
 
 <h2 class='center'>Meeting Rooms</h2>
 
+<!-- First display-box -->
+
+<div class='container box grey lighten-1 z-depth-4'>
+  <div class='row'>
+
+    <div class='col s6'> 
+        <img class='responsive-img box materialboxed img' src='images/meeting4.jpg' width='660px'>
+    </div>
+
+    <div class='col s6'>
+        <h3 class='black-text'>Stunning conference rooms</h3>
+        <p>Brickfield Canvas will have a host of the best conference rooms to offer, fully outfitted with everything needed to support a meeting, from A/V gear to wall-mounted tv's for presentations, Brickfield Canvas has what you'll need</p>
+    </div>
+
+  </div>
+</div>
+
 <h2 class='center'>Work Desks</h2>
+
+    <div class='container box'>
+        <div>
+        <div class='img responsive-img'><img src='images/meeting1.jpg'/></div>
+        <div class='img responsive-img'><img src='images/meeting2.jpg'/></div>
+        </div>
+    </div>
 
   <a style='color: black'>
       {{#each tenants}}
          <div class='container'>
             <div class='col s12 m4'>
-                <div class='card blue darken-2'>
+                <div class='card grey'>
                     <div class='card-content'>    
                         <span class='card-title'>{{title}}</span>
                         <p>{{description}}</p>
