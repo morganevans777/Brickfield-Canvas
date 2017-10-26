@@ -33,7 +33,7 @@ var config = {
              
             if(snapshot) {
                 for(var id in snapshot.val()){
-                    allData.push({id: id, title: snapshot.val()[id].title, description: snapshot.val()[id].description, location: snapshot.val()[id].location});
+                    allData.push({id: id, title: snapshot.val()[id].title, description: snapshot.val()[id].description, location: snapshot.val()[id].location, img: snapshot.val()[id].img});
                 }
                 callback(allData)
             } else {

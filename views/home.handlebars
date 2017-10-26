@@ -1,45 +1,12 @@
-<style>
-
-  .img-circle {
-      border-radius: 50%;
-      width: 430px;
-      height: 400px;
-      margin: 15 0 15 0;
-  }
-
-  #map {
-    height: 400px;
-    width: 100%;
-  }
-
-  .image-corners {
-    border-radius: 30px;
-  }
-
-  .template-img1 {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/new/sunset.png');
-    -webkit-background-size: cover;
-    -moz-background-size:  cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  .img {
-    padding-bottom: 20px;
-  }
-
-</style>
-
-<br></br>
 
 <!-- Navigation buttons -->
 
-  <div class='container flex'>
+  <div class='row'>
   
-      <a href='/tenants'><div class='btn black-text white curve'>Work Spaces<i class='material-icons left'>airline_seat_recline_normal</i></div></a>
-      <a href='/brokers'><div class='btn black-text white curve'>Amenities<i class='material-icons left'>local_cafe</i></div></a>
-      <a href='/events'><div class='btn black-text white curve'>Events<i class='material-icons left'>insert_invitation</i></div></a>
-      <a href='/about'><div class='btn black-text white curve'>About Us<i class='material-icons left'>group</i></div></a>
+      <a class='col s3' href='/tenants'><div class='btn black-text white curve header-button'>Work Spaces<i class='material-icons left'>airline_seat_recline_normal</i></div></a>
+      <a  class='col s3' href='/brokers'><div class='btn black-text white curve  header-button'>Amenities<i class='material-icons left'>local_cafe</i></div></a>
+      <a  class='col s3' href='/events'><div class='btn black-text white curve header-button'>Events<i class='material-icons left'>insert_invitation</i></div></a>
+      <a  class='col s3' href='/about'><div class='btn black-text white curve header-button'>About Us<i class='material-icons left'>group</i></div></a>
 
   </div>
 
@@ -74,7 +41,6 @@
 <!-- Google map -->
 
         <div id="map"></div>
-
           <script>
 
               function initMap() {
@@ -89,11 +55,8 @@
                 });
               }
 
-              $(document).ready(function(){
-              $('.materialboxed').materialbox();
-              });
-
           </script>
+
 
         </div>
       </div>
