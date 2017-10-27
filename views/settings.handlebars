@@ -11,17 +11,17 @@
 
   <p>Click on the item you wish to edit and you'll be taken to that items edit page.</p>
   
-  <h1 class='blue-text lighten-1'>Events</h1>
+  <h1 class='black-text lighten-1'>Events</h1>
 
    {{#each events}}  
     <a style='color: black' href='/edit/events/{{id}}' >
         <div class='container'>
             <div class='col s12 m4'>
-                <div class='card blue darken-2 z-depth-2'>
+                <div class='card grey darken-2 z-depth-2'>
                     <div class='card-content'>    
-                        <span class='card-title white-text'>{{title}}</span>
-                        <p class='white-text'>{{description}}</p>
-                        <p class='white-text'>{{location}}</p>
+                        <span class='card-title black-text'>{{title}}</span>
+                        <p class='black-text'>{{description}}</p>
+                        <p class='black-text'>{{location}}</p>
                     </div>
                 </div>
             </div>
@@ -29,18 +29,18 @@
     </a>
    {{/each}}
 
-   <a class='btn blue lighten z-depth-5' href='/add/events'>Add Event</a>
+   <a class='btn grey lighten z-depth-5' href='/add/events'>Add Event</a>
 
-    <h1 class='blue-text lighten-1'>Blog Space</h1>
+    <h1 class='black-text lighten-1'>Blog Space</h1>
 
    {{#each tenants}}
    <a style='color: black' href='/edit/tenants/{{id}}' >
         <div class='container'>
             <div class='col s12 m4'>
-                <div class='card blue darken-2'>
+                <div class='card grey darken-2'>
                     <div class='card-content'>    
-                        <span class='card-title white-text'>{{title}}</span>
-                        <p class='white-text'>{{description}}</p>
+                        <span class='card-title black-text'>{{title}}</span>
+                        <p class='black-text'>{{description}}</p>
                         <img width="330" height="200" src="{{img}}"/>
                     </div>
                 </div>
@@ -49,23 +49,5 @@
    </a>
    {{/each}}
 
-<a class='btn blue lighten z-depth-5' href='/add/tenants'>Add Blog</a>
+<a class='btn grey lighten z-depth-5' href='/add/tenants'>Add Blog</a>
 
-    <h1 class='blue-text lighten-1'>Brokers</h1> 
-
-   {{#each brokers}}
-   <a style='color: black' href='/edit/brokers/{{id}}' >
-        <div class='container'>
-            <div class='col s12 m4'>
-                <div class='card blue darken-2'>
-                    <div class='card-content'>    
-                        <span class='card-title white-text'>{{title}}</span>
-                        <p class='white-text'>{{description}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-   </a>
-   {{/each}}
-
-<a class='btn blue lighten z-depth-5' href='/add/brokers'>Add Topic</a>

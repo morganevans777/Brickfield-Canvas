@@ -1,19 +1,17 @@
 
 <!-- Navigation buttons -->
 
-  <div class='header-row'>
+  <div class='flex'>
       
-      <a class='header-item' href='/'><div class='btn black-text white curve header-button-small'>Home<i class='material-icons left'>home</i></div></a>
-      <a class='header-item' href='/tenants'><div class='btn black-text grey curve header-button-small'>Work Spaces<i class='material-icons left'>airline_seat_recline_normal</i></div></a>
-      <a class='header-item' href='/brokers'><div class='btn black-text white curve header-button-small'>Amenities<i class='material-icons left'>local_cafe</i></div></a>
-      <a class='header-item' href='/events'><div class='btn black-text white curve header-button-small'>Events<i class='material-icons left'>insert_invitation</i></div></a>
-      <a class='header-item' href='/about'><div class='btn black-text white curve header-button-small'>About Us<i class='material-icons left'>group</i></div></a>
+      <a href='/'><div class='btn black-text white curve'>Home<i class='material-icons left'>home</i></div></a>
+      <a href='/tenants'><div class='btn black-text grey curve'>Work Spaces<i class='material-icons left'>airline_seat_recline_normal</i></div></a>
+      <a href='/brokers'><div class='btn black-text white curve'>Amenities<i class='material-icons left'>local_cafe</i></div></a>
+      <a href='/events'><div class='btn black-text white curve'>Events<i class='material-icons left'>insert_invitation</i></div></a>
+      <a href='/about'><div class='btn black-text white curve'>About Us<i class='material-icons left'>group</i></div></a>
 
   </div>
 
 <!-- Navigation buttons -->
-
-<br></br>
 
 <h2 class='center'>Meeting Rooms</h2>
 
@@ -69,7 +67,22 @@
     <div class='col s4'><img class='materialboxed row-image' src='images/workspace4.jpg'/></div>
 </div>
 
-  <a style='color: black'>
+<!-- Form download buttons -->
+
+  <div class='container'>
+    <div class='center'>
+      <p class='black-text'>View our pricing-information and sign-up forms below...</p>
+    </div>
+  </div>
+
+  <div class='button'>
+    <a href='forms/Brickfield Tenants Information.pdf'><button class='btn curve white black-text'>Sign up forms</button></a>
+    <a href='forms/Brickfield Group indicative rentals 21 Sep 2017.docx'><button class='btn curve white black-text'>Pricing forms</button></a>
+  </div>
+
+<!-- Form download buttons -->
+
+ <a style='color: black'>
       {{#each tenants}}
          <div class='container'>
             <div class='col s12 m4'>
@@ -77,7 +90,7 @@
                     <div class='card-content'>    
                         <span class='card-title'>{{title}}</span>
                         <p>{{description}}</p>
-                        <img width="200" height="200" src="{{img}}"/>
+                        <img width="500" height="300" src="{{img}}"/>
                     </div>
                 </div>
             </div>
