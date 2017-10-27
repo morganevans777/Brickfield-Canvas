@@ -72,7 +72,9 @@
 <form method='POST' action='/edit/{{category}}/{{id}}'>
     
   <div class='add-box'>
+    <h5 class='black-text left-align'>Title</h5>
     <input placeholder='title' type='text' name='title' value="{{title}}"/>
+    <h5 class='black-text left-align'>Description</h5>
     <input placeholder='description' type='text' name='description' value="{{description}}"/>
     <input onFocus="geolocate()" id="pac-input" class="controls" type="text" placeholder="Enter a location" name='location' value="{{location}}">
             <div id="map"></div>
