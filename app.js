@@ -80,12 +80,12 @@ app.post('/login', function(req, res) {
 
 app.get('/settings', function(req, res) {
     database.fetchData('all',function(data) {
-        var values = {events: [], tenants: [], brokers: [], user: req.session.user}
+        var values = {events: [], blog: [], brokers: [], user: req.session.user}
         data.forEach(function(item){
             if(item.category === 'events'){
                 values.events.push(item);
-            } else if(item.category === 'tenants'){
-                values.tenants.push(item);
+            } else if(item.category === 'blog'){
+                values.blog.push(item);
             } else if(item.category === 'brokers'){
                 values.brokers.push(item);
             }
@@ -115,11 +115,8 @@ app.get('/add/:category', function(req, res){
         case 'events':
          res.render('add-events', {category: req.params.category, user: req.session.user});
         break;
-        case 'brokers':
-         res.render('add-brokers', {category: req.params.category, user: req.session.user});
-        break;
-        case 'tenants':
-         res.render('add-tenants',{category: req.params.category, user: req.session.user});
+        case 'blog':
+         res.render('add-blog',{category: req.params.category, user: req.session.user});
         break;
     }
 }) 
@@ -179,9 +176,9 @@ app.get('/view/:category/:id', function(req, res){
     })
 })
 
-app.get('/tenants', function(req, res) {
-    database.fetchData('tenants',function(data) {
-        res.render('tenants', {tenants: data, user: req.session.user});
+app.get('/blog', function(req, res) {
+    database.fetchData('blog',function(data) {
+        res.render('blog', {blog: data, user: req.session.user});
     });
 })
 

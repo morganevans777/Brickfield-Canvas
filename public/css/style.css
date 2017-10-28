@@ -145,10 +145,6 @@ padding-bottom: 20px;
    padding-top: 95px;
  }
  
- body {
-   font-family: 'Montserrat', sans-serif;
- }
- 
  #blog {
    color: blue;
    width: 100%;
@@ -209,4 +205,26 @@ padding-bottom: 20px;
 
 .statement {
   margin: 0 30 30 30;
+}
+
+.event-display-cards {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.blog-display-cards {
+  margin: 0 350px;
+}
+
+.blog-display-img {
+  height: auto;
+  width: 100%;
+}
+
+.greeting {
+  padding-top: 60px;
+}
+
+.buttons-login {
+  border: 0.1px solid grey !important;
 }

@@ -2,7 +2,7 @@
 <div class='flex'>
       
       <a href='/'><div class='buttons btn black-text white curve'>Home<i class='material-icons left'>home</i></div></a>
-      <a href='/tenants'><div class='buttons btn black-text white curve'>Work Spaces<i class='material-icons left'>airline_seat_recline_normal</i></div></a>
+      <a href='/blog'><div class='buttons btn black-text white curve'>Work Spaces<i class='material-icons left'>airline_seat_recline_normal</i></div></a>
       <a href='/brokers'><div class='buttons btn black-text white curve'>Amenities<i class='material-icons left'>local_cafe</i></div></a>
       <a href='/events'><div class='buttons btn black-text white curve'>Events<i class='material-icons left'>insert_invitation</i></div></a>
       <a href='/about'><div class='buttons btn black-text white curve'>About Us<i class='material-icons left'>group</i></div></a>
@@ -13,35 +13,41 @@
   
   <h1 class='black-text lighten-1'>Events</h1>
 
+<div class='row'>
    {{#each events}}  
-    <a style='color: black' href='/edit/events/{{id}}' >
-        <div class='container'>
-            <div class='col s12 m4'>
-                <div class='card grey darken-2 z-depth-2'>
-                    <div class='card-content'>    
-                        <span class='card-title black-text'>{{title}}</span>
-                        <p class='black-text'>{{description}}</p>
-                        <p class='black-text'>{{location}}</p>
+    
+    <div class='col s4'> 
+        <a style='color: black' href='/edit/events/{{id}}'>
+            <div class='event-dispay-cards'>
+                <div class='col s12'>
+                    <div class='card grey darken-1'>
+                        <div class='card-content'>
+                            <span class='card-title black-text'>{{title}}</span>
+                            <p class='black-text'>{{description}}</p>
+                            <span>{{location}}</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </a>
-   {{/each}}
+        </a>
+    </div>
 
-   <a class='btn grey lighten z-depth-5' href='/add/events'>Add Event</a>
+   {{/each}}
+</div>
+
+   <a class='buttons curve white black-text btn' href='/add/events'>Add Event<i class='material-icons left'>add_circle_outline</i></a>
 
     <h1 class='black-text lighten-1'>Blog Space</h1>
 
-   {{#each tenants}}
-   <a style='color: black' href='/edit/tenants/{{id}}' >
-        <div class='container'>
+   {{#each blog}}
+   <a style='color: black' href='/edit/blog/{{id}}' >
+        <div class='blog-display-cards'>
             <div class='col s12 m4'>
-                <div class='card grey darken-2'>
+                <div class='card grey darken-1'>
                     <div class='card-content'>    
                         <span class='card-title black-text'>{{title}}</span>
                         <p class='black-text'>{{description}}</p>
-                        <img width="330" height="200" src="{{img}}"/>
+                        <img class='blog-display-img' src="{{img}}"/>
                     </div>
                 </div>
             </div>
@@ -49,5 +55,5 @@
    </a>
    {{/each}}
 
-<a class='btn grey lighten z-depth-5' href='/add/tenants'>Add Blog</a>
+<a class='buttons curve btn white black-text' href='/add/blog'>Add Blog<i class='material-icons left'>add_circle_outline</i></a>
 
