@@ -47,6 +47,10 @@ app.get('/', function(req, res) {
     res.render('home', {user: req.session.user})
 }); 
 
+app.get('/disclaimer', function(req, res) {
+    res.render('disclaimer')
+})
+
 app.get('/about', function(req, res) {
     res.render('about')
 });
@@ -182,8 +186,8 @@ app.get('/blog', function(req, res) {
     });
 })
 
-app.get('/brokers', function(req, res) {
-    res.render('brokers', {user: req.session.user});
+app.get('/amenities', function(req, res) {
+    res.render('amenities', {user: req.session.user});
 })
 
 app.listen(3000);

@@ -19,9 +19,13 @@
 <div class='add-box'>
 
     <h5 class='black-text left-align'>Email:</h5>
-        <input placeholder='email' type='text' name='email'/>
+        <input placeholder='johnDory@gmail.com' type='text' name='email'/>
     <h5 class='black-text left-align'>Password:</h5>    
-        <input placeholder='password' type='password' name='password'/>
-        <input actions='/login/{{email}}/{{password}}' value='login' type='submit' class='buttons-login btn black-text white lighten-1 curve'>
+        <input placeholder='****' type='password' name='password'/>
+
+    <div class='center'>
+        <button actions='/login/{{email}}/{{password}}' type='submit' class='buttons-login buttons curve btn white black-text'>Login<i class='material-icons left'>input</i></button>
+    </div>
+
 </div>
 </form>
