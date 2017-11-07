@@ -8,6 +8,10 @@ var session = require('express-session')
 var multer = require('multer')
 var fs = require('file-system');
 
+
+var path = require("path");
+
+
 var handlebars = require('express3-handlebars')
 .create({defaultLayout: 'main'});
 
@@ -44,7 +48,17 @@ app.use(function(req, res, next){
 })
 
 app.get('/', function(req, res) {
-    res.render('home', {user: req.session.user})
+    database.fetchData('all',function(data) {
+        var values = {events: [], blog: [], user: req.session.user}
+        data.forEach(function(item){
+            if(item.category === 'events'){
+                values.events.push(item);
+            } else if(item.category === 'blog'){
+                values.blog.push(item);
+            }
+        })
+        res.render('home', values);
+    });
 }); 
 
 app.get('/disclaimer', function(req, res) {
@@ -52,7 +66,7 @@ app.get('/disclaimer', function(req, res) {
 })
 
 app.get('/about', function(req, res) {
-    res.render('about')
+    res.render('about', {user: req.session.user})
 });
 
 app.get('/login', function(req, res) {
@@ -84,14 +98,12 @@ app.post('/login', function(req, res) {
 
 app.get('/settings', function(req, res) {
     database.fetchData('all',function(data) {
-        var values = {events: [], blog: [], brokers: [], user: req.session.user}
+        var values = {events: [], blog: [], user: req.session.user}
         data.forEach(function(item){
             if(item.category === 'events'){
                 values.events.push(item);
             } else if(item.category === 'blog'){
                 values.blog.push(item);
-            } else if(item.category === 'brokers'){
-                values.brokers.push(item);
             }
         })
         res.render('settings', values);
@@ -165,25 +177,25 @@ app.get('/remove/:category/:id', function(req, res) {
 })
 
 app.get('/events', function(req, res) {
-    database.fetchData('events',function(data) {
-        res.render('events', {events: data, user: req.session.user});
-    });
+        res.render('events', {user: req.session.user});
+
 })
 
 app.get('/view/:category/:id', function(req, res){
 
     var category = req.params.category;
-    category = category.substring(0, category.length - 1);
+    if(category === 'events'){
+        category = category.substring(0, category.length - 1);        
+    }
     var template = category;
     database.fetchDataById(req.params.category, req.params.id, function(data){
-        res.render(template, {description: data.description, location: data.location, title: data.title , category: req.params.category, id: req.params.id, user: req.session.user})
+        console.log(data)
+        res.render(template, {description: data.description, location: data.location, title: data.title , category: req.params.category, id: req.params.id, user: req.session.user, img: data.img})
     })
 })
 
-app.get('/blog', function(req, res) {
-    database.fetchData('blog',function(data) {
-        res.render('blog', {blog: data, user: req.session.user});
-    });
+app.get('/workspaces', function(req, res) {
+        res.render('workspaces', { user: req.session.user});
 })
 
 app.get('/amenities', function(req, res) {

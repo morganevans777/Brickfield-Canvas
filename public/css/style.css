@@ -94,7 +94,8 @@ select {
 }
 
 .img {
-padding-bottom: 20px;
+  padding-bottom: 20px;
+  width: 100%;
 }
 
 .header-item {
@@ -241,4 +242,16 @@ padding-bottom: 20px;
 
 .buttons-login {
   border: 0.1px solid grey !important;
+}
+
+.about-heading {
+  padding-left: 170px;
+}
+
+.about-heading-text {
+  padding-left: 170px;
+}
+
+.about-button {
+  margin-right: 60px;
 }
