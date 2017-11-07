@@ -102,12 +102,9 @@ select {
   padding: 5px 
 }
 
-.button {
-  padding-bottom: 25px;
-}
-
 .buttons {
   border: 0.1px solid grey;
+
 }
 
 .button-size {
@@ -117,6 +114,10 @@ select {
 .btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
     font-size: 2.3rem !important;
     color: #FF8C00;
+}
+
+.btn, .btn-large {
+    font-size: 18px;
 }
 
  @media only screen and (max-width : 992px) {
@@ -244,14 +245,10 @@ select {
   border: 0.1px solid grey !important;
 }
 
-.about-heading {
-  padding-left: 170px;
+.contact-us-block {
+  margin-left: 190px;
 }
 
-.about-heading-text {
-  padding-left: 170px;
-}
-
-.about-button {
-  margin-right: 60px;
+.contact-us-content {
+  text-align: left;
 }
