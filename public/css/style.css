@@ -238,7 +238,11 @@ select {
 }
 
 .greeting {
-  padding-top: 60px;
+  padding-top: 50px;
+}
+
+.greeting-text {
+  padding-right: 15%;
 }
 
 .buttons-login {
