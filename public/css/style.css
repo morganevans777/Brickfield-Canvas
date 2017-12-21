@@ -394,3 +394,7 @@ select {
 #myBtn:hover {
   background-color: #795548; /* Add a dark-grey background on hover */
 }
+
+i.icon-white {
+  color: white;
+}

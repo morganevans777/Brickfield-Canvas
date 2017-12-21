@@ -1,13 +1,12 @@
 <style>
 
+    body {
+      background-color: white;
+    }
+
     .add-box {
         padding-left: 40px;
         padding-right: 40px;
-    }
-
-    .input1 {
-        line-height: normal;
-        border-color: lightblue !important;
     }
 
     /* google maps */
@@ -64,6 +63,8 @@
 <form method='POST' action='/add/{{category}}'>
 
 <div class='add-box'>
+  <div class='row'>  
+    <div class='input-field'>
     <h5 class='black-text'>Please fill in the details of your event below...</h5>
 
     <h5 class='black-text left-align'>Event name</h5>
@@ -83,9 +84,10 @@
         </div>
 
     <br></br>
-
+    </div>
+  </div>
       <div class='center'>
-          <button class='buttons-login buttons curve btn white black-text' type='submit'>Add Event<i class='material-icons left'>add_circle_outline</i></button>
+          <button class="btn user-button btn-large waves-effect waves-light z-depth-3" type='submit'>Add Event<i class='material-icons icon-white left'>add_circle_outline</i></button></a>
       </div>
 
 </div>

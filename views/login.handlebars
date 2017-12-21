@@ -1,10 +1,10 @@
 
 <style>
 
-    input {
-        line-height: normal;
-        border-color: lightblue !important;
+    body {
+      background-color: white;
     }
+
 
      .add-box {
         padding-left: 40px;
@@ -18,13 +18,19 @@
 
 <div class='add-box'>
 
-    <h5 class='black-text left-align'>Email:</h5>
-        <input placeholder='johnDory@gmail.com' type='text' name='email'/>
-    <h5 class='black-text left-align'>Password:</h5>    
-        <input placeholder='****' type='password' name='password'/>
+  <div class='row'>
+      <div class='input-field'>
+        
+        <h5 class='black-text left-align'>Email:</h5>
+            <input class='black-text' placeholder='johnDory@gmail.com' type='text' name='email'/>
+        <h5 class='black-text left-align'>Password:</h5>    
+            <input placeholder='****' type='password' name='password'/>
+            
+      </div>  
+  </div>
 
     <div class='center'>
-        <button actions='/login/{{email}}/{{password}}' type='submit' class='buttons-login buttons curve btn white black-text'>Login<i class='material-icons left'>input</i></button>
+        <button actions='/login/{{email}}/{{password}}' class='user-button btn btn-large waves-effect waves-light z-depth-3' type='submit'>Login<i class='material-icons icon-white left'>input</i></button>
     </div>
 
 </div>

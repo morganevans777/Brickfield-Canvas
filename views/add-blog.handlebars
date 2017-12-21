@@ -1,13 +1,13 @@
 <style>
 
+    body {
+      background-color: white;
+    }
+
+
     .add-box {
         padding-left: 40px;
         padding-right: 40px;
-    }
-
-    input {
-        line-height: normal;
-        border-color: lightblue !important;
     }
 
 </style>
@@ -15,21 +15,25 @@
 <form method='POST' action='/add/{{category}}' enctype="multipart/form-data">
 
 <div class='add-box'>
-    <h5 class='black-text'>Please fill in the details of your blog post below...</h5>
+  <div class='row'> 
+      <div class='input-field'>
+            <h5 class='black-text'>Please fill in the details of your blog post below...</h5>
 
-    <h5 class='black-text left-align'>blog post name</h5>
-        <input placeholder='blog post name' type='text' name='title'/>
-    <h5 class='black-text left-align'>blog post</h5>    
-        <input placeholder='blog post' type='text' name='description'/>
+            <h5 class='black-text left-align'>blog post name</h5>
+                <input placeholder='blog post name' type='text' name='title'/>
+            <h5 class='black-text left-align'>blog post</h5>    
+                <input placeholder='blog post' type='text' name='description'/>
 
-      <div class='center'>
-          <button class='buttons-login buttons curve btn white black-text' type='submit'>Add blog post<i class='material-icons left'>add_circle_outline</i></button>
-      </div>
+            <div class='center'>
+                <button class="btn user-button btn-large waves-effect waves-light z-depth-3" type='submit'>Add Blog<i class='material-icons icon-white left'>add_circle_outline</i></button></a>
+            </div>
 
-    <input class='left' type='file' name='img'/>
+            <input class='left' type='file' name='img'/>
 
+    </div>
+  </div> 
 </div>
 
 </form>
 
-
+<br></br>
