@@ -1,23 +1,8 @@
 
-<!-- Navigation buttons -->
-
-  <div class='flex'>
-
-      <a href='/'><div class='buttons btn black-text grey curve'>Home<i class='material-icons left'>home</i></div></a>
-      <a href='/workspaces'><div class='buttons btn black-text white lighten-1 curve'>Work Spaces<i class='icon material-icons left'>airline_seat_recline_normal</i></div></a>
-      <a href='/amenities'><div class='buttons btn black-text white lighten-1 curve'>Amenities<i class='material-icons left'>local_cafe</i></div></a>
-      <a href='/events'><div class='buttons btn black-text white lighten-1 curve'>Events<i class='material-icons left'>insert_invitation</i></div></a>
-      <a href='/about'><div class='buttons btn black-text white lighten-1 curve'>About Us<i class='material-icons left'>group</i></div></a>
-
-  </div>
-
-<!-- Navigation buttons -->
-
-<br></br>
 
 <!-- Greeting display-box -->
 
-<div class='grey lighten-2'>
+<div class='grey'>
 <div class='row'>
 
   <div class='col s6'>
@@ -29,7 +14,7 @@
         <div class='greeting-text'>
             <h2 class='black-text'>Hello and Welcome!</h2>
             <h5 class='black-text'>Tired of work leaving you feeling like no more than another brick in the wall?</h5>
-            <p>Brickfield Canvas offers work desks, offices and meeting rooms in a variety of options available for those looking for new and different location to work at, We offer a fun twist on work with modern styling and innovative ideas, Brickfield Canvas will also host cafe's to fuel people's work efforts!</p>
+            <p>Brickfield Canvas offers work desks, offices and meeting rooms in a variety of options available for those looking for a new and different location to work at, We offer a fun twist on work with modern styling and innovative ideas, Brickfield Canvas will also host cafe's to fuel people's work efforts!</p>
         </div>
     </div>
   </div>
@@ -37,12 +22,66 @@
 </div>  
 </div>
 
-  <div>
-    <img class='img' src='images/new/sunset.png'/>
-  </div>
+<div class='flex button-box'>
+    <a href='/about#target'><button class="btn user-button btn-large waves-effect waves-light z-depth-3">Learn More</button></a>
+    <a href="/facilities#target"><button class="btn user-button btn-large waves-effect waves-light z-depth-3">Book Event</button></a>
+    <a href='/events'><button class="btn user-button btn-large waves-effect waves-light z-depth-3">View Rates</button></a>
+    <a href='/workspaces#target'><button class="btn user-button btn-large waves-effect waves-light z-depth-3">Join Here</button></a>
+</div>
+
+<div class='container'>
+
+    <div class='col s6 center'>
+        <h3 class='black-text card-text'><u>Top quality "Green" facilities</u></h3>
+        <p class='text-block card-text'>Brickfield Canvas offers you the highest quality services, as well as doing so in the "greenest" way possible... Throughout the building there will be wifi including fibre, solar panels to assist in producing power for the building, and green water solutions to contribute to the water crisis, We've got absolutely everything you need to help keep up productivity</p>
+    </div>
+
+</div>
+
+<div class='row image-row'>
+    <div class='col s4'><img class='materialboxed row-image' src='images/fibre.jpg'/>Fibre wifi</div>
+    <div class='col s4'><img class='materialboxed row-image' src='images/solar.jpg'/>Solar Panels</div>
+    <div class='col s4'><img class='materialboxed row-image' src='images/water.jpg'/>Water harvesting solutions</div>
+</div>
+
+<br></br>
+
+<h3><u>Concept images</u></h3>
+
+    <div class='container'>
+          <div class='carousel carousel-slider center' data-indicators='true'>
+              <div class='carousel-item brown black-text' href='#one!'>
+                <h2 class='text'>Entrance View</h2>
+                <img src='images/new/View001.jpg'>
+              </div>
+              <div class='carousel-item brown black-text'>
+                <h2 class='text'>Parking View</h2>
+                <img src='images/new/View002.jpg'>
+              </div>
+              <div class='carousel-item brown black-text'>
+                <h2 class='text'>Elevated View from West</h2>
+                <img src='images/new/View003.jpg'>
+              </div>
+              <div class='carousel-item brown black-text'>
+                <h2 class='text'>Courtyard View</h2>
+                <img src='images/new/View004.jpg'>
+              </div>
+              <div class='carousel-item brown black-text'>
+                <h2 class='text'>Balcony View</h2>
+                <img src='images/new/View005.jpg'>
+              </div>
+              <div class='carousel-item brown black-text'>
+                <h2 class='text'>Sunset View</h2>
+                <img src='images/new/View007.jpg'>
+              </div>
+          </div>
+    </div>
+
+<br></br>
 
 <!-- Blog -->
 
+<!--
   <div class="container">
       <h2 class='header center black-text text-lighten-10'>Our Blog</h2>
   </div>
@@ -63,14 +102,16 @@
         </div>
       </a>
     {{/each}}
+-->
 
 <!-- Events --> 
 
   <div class="container">
       
-      <h2 class='header center black-text text-lighten-10'>Events Information</h2>
+      <h2 class='header center black-text text-lighten-10'><u>Events Information</u></h2>
 
       <div class='center black-text'>
+        <p>We host events at Brickfield Canvas which are available to the general public, feel free to book an event with us</p>
         <p>Click an event to view it's details</p>
       </div>
 
@@ -83,7 +124,7 @@
         <a style='color: black' href='/view/events/{{id}}'>
             <div class='event-dispay-cards'>
                 <div class='col s12'>
-                    <div class='card grey darken-1'>
+                    <div class='card brown darken-1 z-depth-5'>
                         <div class='card-content'>
                             <span class='card-title black-text'>{{title}}</span>
                             <p class='black-text'>{{description}}</p>
@@ -97,3 +138,22 @@
 
    {{/each}}
 </div>
+
+    <div id="map"></div>
+          <script>
+
+              function initMap() {
+                var uluru = {lat: -33.936681, lng: 18.456182};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 14,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
+
+    </script>
+
+<a href="#" id='myBtn' class="scrollToTop">Back To Top<i class='material-icons left'>arrow_upward</i></a>

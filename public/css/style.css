@@ -62,6 +62,7 @@ select {
     height: 250px;
     width: 100%;
     padding: 5px;
+    border-radius: 15px;
 }
 
 .img-circle {
@@ -86,7 +87,7 @@ select {
 }
 
 .template-img1 {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/new/sunset.png');
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('images/new/sunset.png');
   -webkit-background-size: cover;
   -moz-background-size:  cover;
   -o-background-size: cover;
@@ -104,7 +105,7 @@ select {
 
 .buttons {
   border: 0.1px solid grey;
-
+  background-color: #cba33d;
 }
 
 .button-size {
@@ -238,7 +239,7 @@ select {
 }
 
 .greeting {
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
 .greeting-text {
@@ -255,4 +256,141 @@ select {
 
 .contact-us-content {
   text-align: left;
+}
+
+.card-text {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.table {  
+  width: 80%;
+  margin-left: 10%;
+}
+
+.table-header {
+  font-size: 20px;
+}
+
+.forms {
+  width: 70%;
+}
+
+.txt:hover {
+  text-decoration: underline;
+}
+
+.large-images {
+  height: 50%;
+  width: 100%;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.user-button {
+  border-radius: 8px;
+  background-color: #cba33d;
+}
+
+.button-box {
+  justify-content: space-between;
+}
+
+.header-text {
+  color: #cba33d;
+}
+
+ /* label color */
+ .input-field label {
+  color: black;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #e5c100;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #e5c100;
+  box-shadow: 0 1px 0 0 #e5c100;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #e5c100;
+  box-shadow: 0 1px 0 0 #e5c100;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #e5c100;
+  box-shadow: 0 1px 0 0 #e5c100;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #e5c100;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+  color: #e5c100 !important;
+}
+
+/* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid #e5c100 !important;
+  box-shadow: 0 1px 0 0 #e5c100 !important
+}
+
+.btn {
+  overflow: hidden;
+}
+.btn:hover:before {
+  opacity:1;
+}
+
+.btn:before {
+    content: '';
+    opacity: 0;
+    background-color: #795548;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: opacity .2s;
+    z-index: -1;
+    text-decoration: none;
+}
+
+.text {
+  color: #DAA520;
+}
+
+.link {
+  font-size: 20px;
+}
+
+.carousel {
+  border-radius: 15px;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 0.1px solid black; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #cba33d; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+  background-color: #795548; /* Add a dark-grey background on hover */
 }

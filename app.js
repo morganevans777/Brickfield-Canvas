@@ -176,8 +176,8 @@ app.get('/remove/:category/:id', function(req, res) {
     res.redirect('/settings')
 })
 
-app.get('/events', function(req, res) {
-        res.render('events', {user: req.session.user});
+app.get('/rates', function(req, res) {
+        res.render('rates', {user: req.session.user});
 
 })
 
@@ -198,8 +198,8 @@ app.get('/workspaces', function(req, res) {
         res.render('workspaces', { user: req.session.user});
 })
 
-app.get('/amenities', function(req, res) {
-    res.render('amenities', {user: req.session.user});
+app.get('/facilities', function(req, res) {
+    res.render('facilities', {user: req.session.user});
 })
 
 app.listen(3000);

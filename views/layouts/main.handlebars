@@ -7,18 +7,19 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
  <link rel='stylesheet' type='text/css' href='/css/style.css'>
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Vollkorn|Spectral+SC" rel="stylesheet">
 </head>
 
     <style>
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Vollkorn', serif;
+            font-size: 17px;
+            background-color: #DCDCDC;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Spectral SC', serif;
         }
 
         .disclaimer {
@@ -54,7 +55,8 @@
         }
 
         .logo-header {
-            font-family: 'Oswald', sans-serif;
+           font-family: 'Spectral SC', serif;
+           color: #DAA520;
         }
 
     </style>
@@ -63,16 +65,38 @@
 
 <!-- NavBar -->
 
-  <nav class="orange darken-1 z-depth-5" role="navigation">
+  <nav class="brown darken-1 z-depth-5" role="navigation">
     <div class="nav-wrapper">
       <ul>
         <li>
-         <a href="/" class="black-text logo logo-header">Brickfield Canvas</a>
+         <a href="/" class="logo logo-header"><u>Brickfield Canvas</u></a>
         </li>
       </ul>
 
-<!-- Login button --> 
+      <ul class="right hide-on-med-and-down">
+        <li><a class='text link' href="/about">Contact Us</a></li>
+      </ul>
 
+      <ul class="right hide-on-med-and-down">
+        <li><a class='text link' href="/rates">Rates</a></li>
+      </ul>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a class='text link' href="/facilities">Facilities</a></li>
+      </ul>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a class='text link' href="/workspaces">Workspaces</a></li>
+      </ul>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a class='text link' href="/">Home</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>   
     </div>
   </nav>
 
@@ -81,7 +105,7 @@
       <div class="container">
         <br><br>
         <div id='header'>
-          <h1 class="modak header center orange-text darken-3">Changing the flow of work</h1>
+          <h1 class="text header center">Changing the flow of work</h1>
         </div>
         <br><br>
       </div>
@@ -89,50 +113,63 @@
     <div class='parallax'><img class='responsive-img template-img'></div>
   </div>
 
-    <br></br>
-
     {{{body}}}
 
-    <br></br>
-
-  <footer class="page-footer orange darken-1">
+ 
+  <footer class="page-footer brown darken-1">
     
       <div class="container">
           <div class="row">
             <div class="col s6 left-align">
-                <h5 class='black-text'>Other Links</h5>
+                  <h5 class='text'><u>Address</u></h5>
+                <ul>
+                  <li class='text'>35 Brickfield Road, Woodstock</li>
+                  <li class='text'>7295, Cape Town</li>
+                  <li class='text'>South Africa, Western Cape</li>
+                </ul>
+            </div>
+
+        <div class="col l3 s12 left-align">
+          <h5 class="text"><u>Settings</u></h5>
+          <ul>
                 
                 {{#if user}}
                     <ul class='left login'>
-                        <li><a href='/logout' class='black-text'>Logout</a></li>
+                        <li><a href='/logout' class='text txt'>Logout</a></li>
                    
 
                     
-                        <li><a href="/settings" class='black-text'>Settings</a></li>
+                        <li><a href="/settings" class='text txt'>Settings</a></li>
                     
                 {{/if}}
 
 <!-- NavBar -->
-
 <!-- Login button -->
 
                 {{#unless user}}
                     
-                        <li><a href='/login' class='black-text'>Login</a></li>
+                        <li><a href='/login' class='text txt'>Login</a></li>
                     
                 {{/unless}}
    
-                    
-                        <li><a href='/disclaimer' class='black-text '>Disclaimer</a></li>
+                        <li><a href='/disclaimer' class='text txt'>Disclaimer</a></li>
                     </ul>
+          </ul>
+        </div>
+        <div class="col l3 s12 left-align">
+          <h5 class="text"><u>Contact Us</u></h5>
+          <ul>
+            <li><a href='mailto:trevor@sprinthive.com?subject=Brickfield%20Canvas' class='txt'>info@BrickfieldCanvas.co.za</a></li>
+            <li><a class="text txt" href="#!">021 599 8734</a></li>
+          </ul>
+        </div>
 
-            </div>
           </div>
         </div>
 
     
 
-    <div class='foot black-text' class="footer-copyright">
+    <div class='brown darken-2 foot text' class="footer-copyright">
         © 2017 by Brickfield Group
     </div>
 
@@ -171,6 +208,45 @@
             });
 
           </script>
+
+          <script>
+            
+            $(document).ready(function() {
+                $('select').material_select();
+            });
+       
+            $('select').material_select('destroy');
+
+          </script>
+
+          <script>
+
+             $('.datepicker').pickadate({
+              selectMonths: true, // Creates a dropdown to control month
+              selectYears: 15, // Creates a dropdown of 15 years to control year,
+              today: 'Today',
+              clear: 'Clear',
+              close: 'Ok',
+              closeOnSelect: false // Close upon selecting a date,
+            });
+
+          </script>
+
+        <script>
+
+            $('.timepicker').pickatime({
+              default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+              fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+              twelvehour: false, // Use AM/PM or 24-hour format
+              donetext: 'OK', // text for done-button
+              cleartext: 'Clear', // text for clear-button
+              canceltext: 'Cancel', // Text for cancel-button
+              autoclose: false, // automatic close timepicker
+              ampmclickable: true, // make AM PM clickable
+              aftershow: function(){} //Function for after opening timepicker
+            });
+
+        </script>
 
 </body>
 </html>
