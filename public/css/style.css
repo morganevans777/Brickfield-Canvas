@@ -63,6 +63,7 @@ select {
     width: 100%;
     padding: 5px;
     border-radius: 15px;
+    border: 1px solid black;
 }
 
 .img-circle {
@@ -397,4 +398,12 @@ select {
 
 i.icon-white {
   color: white;
+}
+
+.hover:hover {
+  text-decoration: underline;
+}
+
+.curve {
+  border-radius: 20px;
 }
